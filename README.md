@@ -21,5 +21,5 @@
     useful to write unit tests.
   - I set the PrimaryKey of the data tables to the "startsAt" variable because the tripId was the same
     between all the ride items. 
-  - There are 1-2 ride items that have the same coordinates so the Google Maps fragment placed them in
+  - There are 1-2 ride items that have the same coordinates, so the Google Maps fragment placed them in
     the same spot.
