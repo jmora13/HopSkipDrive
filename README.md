@@ -8,7 +8,7 @@
   
 3. Any notes and improvements you'd make
   - The OnClick function in the main recyclerview to start the Ride Details activity only registers
-    if you click the holder (surrounding area), but won't register if you click the recycler view
+    if you click the holder (surrounding area), but won't register if you click the nested recycler         view.
   - I used put/getExtra to send all of the data from the Ride List Adapter to the Ride Details activity,
     which looks a little messy. It probably would've been cleaner to call the data from the database, 
     but I would've had to parse the date and time strings again. To avoid putting more parsing functions
@@ -16,7 +16,7 @@
     the data between classes however.
   - As far as the testability of my code, it definitely has a lot of room for improvement. I used the 
     double bang operator (!!) everywhere, which means that the code would only work under the exact 
-    conditions for the project, but if the data changes, then the app which surely crash. It would be 
+    conditions for the project, but if the data changes, then the app would surely crash. It would be 
     beneficial to set default values using the elvis operator (?:). It would also would've been
     useful to write unit tests.
   - I set the PrimaryKey of the data tables to the "startsAt" variable because the tripId was the same
