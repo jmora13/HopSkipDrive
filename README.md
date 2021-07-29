@@ -22,3 +22,5 @@
   - I set the PrimaryKey of the data tables to the "startsAt" variable because the tripId was the same
     between all the ride items. 
   - There are 1-2 ride items that have the same coordinates, so the Google Maps fragment placed the         markers in the same spot.
+  - I understand that my API Key for Google Maps is listed in this public repository and thats fine.
+    I made that key specifically for this project.
