@@ -14,7 +14,7 @@
     but I would've had to parse the date and time strings again. To avoid putting more parsing functions
     in the main, I chose to just send the data from the adapter. I'm sure there's a cleaner way to pass
     the data between classes however.
-    - As far as the testability of my code, it definitely has a lot of room for improvement. I used the 
+  - As far as the testability of my code, it definitely has a lot of room for improvement. I used the 
     double bang operator (!!) everywhere, which means that the code would only work under the exact 
     conditions for the project, but if the data changes, then the app which surely crash. It would be 
     beneficial to set default values using the elvis operator (?:). It would also would've been
