@@ -1,7 +1,7 @@
 # HopSkipDrive
 
 1. List of third party libraries used
-  - Retrofit, Dagger - Hilt, Room DB, Google Play Services Locatation / Maps, Material Components
+  - Retrofit, Dagger - Hilt, Room DB, Google Play Services Location / Maps, Material Components
   
 2. For Android, include a link to APK file
   - https://drive.google.com/drive/folders/1LLopjhUvwd3Q6sFSwnMy0swd7ZfJLddk?usp=sharing
