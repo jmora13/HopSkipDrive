@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".RideDetailsActivity">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/rideDetailsTop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardElevation="5dp"
+        app:cardBackgroundColor="@color/white"
+        tools:visibility="visible">
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp">
+
+            <TextView
+                android:id="@+id/rideDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerInParent="true"
+                android:textColor="@color/Primary"
+                android:textSize="15dp"
+                android:textStyle="bold"
+                tools:text="Thu 6/17" />
+
+            <TextView
+                android:id="@+id/center_circle"
+                android:layout_toRightOf="@id/rideDate"
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:text="·"/>
+
+            <TextView
+                android:id="@+id/startRideTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_toRightOf="@+id/center_circle"
+                android:textColor="@color/black"
+                android:textSize="12dp"
+                android:textStyle="bold"
+                tools:text="4:18a " />
+
+            <TextView
+                android:id="@+id/endRideTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_toRightOf="@+id/startRideTime"
+                android:textColor="@color/black"
+                android:textSize="12dp"
+                tools:text="- 4.26p" />
+
+            <TextView
+                android:id="@+id/estimate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:gravity="center"
+                android:text="@string/estimated"
+                android:textColor="@android:color/black"
+                android:textSize="9dp"
+                tools:text="ESTIMATED" />
+
+            <TextView
+                android:id="@+id/totalEstimate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/estimate"
+                android:layout_alignParentRight="true"
+                android:gravity="center"
+                android:textColor="@color/Primary"
+                tools:text="$105.25" />
+
+
+        </RelativeLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <androidx.fragment.app.FragmentContainerView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        class="com.google.android.gms.maps.SupportMapFragment"
+        android:id="@+id/fragmentContainerView"
+        android:layout_width="match_parent"
+        android:tag="mapFragment"
+        android:layout_height="200dp" />
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/isSeries"
+        android:visibility="gone"
+        tools:visibility="visible">
+
+        <TextView
+            android:layout_margin="10dp"
+            android:text="@string/inSeries"
+            android:layout_width="match_parent"
+            android:textStyle="italic"
+            android:layout_height="wrap_content"
+            tools:text="This trip is part of a series."/>
+    </com.google.android.material.card.MaterialCardView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/pickupDropoffRecyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:listitem="@layout/ride_details_recyclerview_item"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/driveDetails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="2dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp">
+
+        <TextView
+            android:id="@+id/tripId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            tools:text="af5d050caaa63F"/>
+
+            <TextView
+                android:id="@+id/circle_separator1"
+                android:layout_toRightOf="@id/tripId"
+                android:layout_width="wrap_content"
+                android:layout_margin="3dp"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:text="·"/>
+
+        <TextView
+            android:id="@+id/distance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            tools:text="18.48 mi"/>
+
+            <TextView
+                android:id="@+id/circle_separator2"
+                android:layout_toRightOf="@id/distance"
+                android:layout_width="wrap_content"
+                android:layout_margin="3dp"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:text="·"/>
+
+        <TextView
+            android:id="@+id/duration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            tools:text="50 min"/>
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/deleteRide"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:gravity="center"
+            android:fontFamily="sans-serif-medium"
+            android:onClick="deleteRide"
+            android:textSize="15dp"
+            android:textColor="@android:color/holo_red_light"
+            android:text="@string/cancel_this_trip"/>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</LinearLayout>

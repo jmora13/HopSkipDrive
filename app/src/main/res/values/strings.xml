@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">HopSkipDrive</string>
+    <string name="estimated">ESTIMATED</string>
+    <string name="drop_off">Drop-off</string>
+    <string name="pickup">Pickup</string>
+    <string name="inSeries">This trip is part of a series.</string>
+    <string name="maps_api_key">AIzaSyCyxvlEhy7NvMNQAZj9o4XuzO6hXXInY-Y</string>
+    <string name="cancel_this_trip">Cancel This Trip</string>
+    <string name="est">est. </string>
+</resources>

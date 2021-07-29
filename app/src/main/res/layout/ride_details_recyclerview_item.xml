@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/pickup_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="2dp"
+        android:elevation="10dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp">
+
+            <ImageView
+                android:id="@+id/shape"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                tools:src="@drawable/diamond"/>
+
+            <TextView
+                android:id="@+id/pickupTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/shape"
+                android:textStyle="bold"
+                tools:text="Pickup" />
+            <TextView
+                android:id="@+id/address"
+                android:layout_below="@id/pickupTextView"
+                android:layout_alignStart="@id/pickupTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="1 World Way, Los Angeles, CA"/>
+
+        </RelativeLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
