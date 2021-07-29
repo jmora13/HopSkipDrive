@@ -19,3 +19,7 @@
     conditions for the project, but if the data changes, then the app which surely crash. It would be 
     beneficial to set default values using the elvis operator (?:). It would also would've been
     useful to write unit tests.
+  - I set the PrimaryKey of the data tables to the "startsAt" variable because the tripId was the same
+    between all the ride items. 
+  - There are 1-2 ride items that have the same coordinates so the Google Maps fragment placed them in
+    the same spot.
