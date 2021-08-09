@@ -22,3 +22,7 @@
   - I set the PrimaryKey of the data tables to the "startsAt" variable because the tripId was the same
     between all the ride items. 
   - There are 1-2 ride items that have the same coordinates, so the Google Maps fragment placed the         markers in the same spot.
+
+
+![Image](https://github.com/jmora13/HopSkipDrive/blob/master/Screenshot_20210808-233449_HopSkipDrive_20.jpg?raw=true)
+![Image](https://github.com/jmora13/HopSkipDrive/blob/master/Screenshot_20210808-233504_HopSkipDrive_20.jpg?raw=true)
